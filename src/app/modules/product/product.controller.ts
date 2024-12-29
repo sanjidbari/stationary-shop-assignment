@@ -25,8 +25,12 @@ const createProduct = async (req: Request, res: Response) => {
       message: `Product${isArray ? "s" : ""} created successfully`,
       data: result,
     });
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal server error",
+      status: false,
+      data: error,
+    });
   }
 };
 
@@ -39,8 +43,12 @@ const getAllProducts = async (req: Request, res: Response) => {
       message: "Products are retrieved successfully",
       data: result,
     });
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal server error",
+      status: false,
+      data: error,
+    });
   }
 };
 
@@ -54,8 +62,12 @@ const getSingleProduct = async (req: Request, res: Response) => {
       message: "Requested product is retrieved successfully",
       data: result,
     });
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal server error",
+      status: false,
+      data: error,
+    });
   }
 };
 
@@ -69,8 +81,6 @@ const updateSingleProduct = async (req: Request, res: Response) => {
       productData,
     );
 
-    console.log(result);
-
     if (!result) {
       return res.status(404).json({
         message: "Product not found",
@@ -83,8 +93,12 @@ const updateSingleProduct = async (req: Request, res: Response) => {
       message: "Product is updated successfully",
       data: result,
     });
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal server error",
+      status: false,
+      data: error,
+    });
   }
 };
 
@@ -104,8 +118,12 @@ const deleteSingleProduct = async (req: Request, res: Response) => {
       success: true,
       message: "Product is deleted successfully",
     });
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal server error",
+      status: false,
+      data: error,
+    });
   }
 };
 

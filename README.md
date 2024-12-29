@@ -1,14 +1,14 @@
 # Stationery Shop - B4A2V5
 # Overview
-The Stationery Shop application is built using Express.js and TypeScript, with MongoDB as the database. This application helps manage a stationery shop's products and orders. It allows users to perform CRUD operations on products and place orders, while also managing inventory and calculating total revenue. The app ensures data integrity using Mongoose schema validation.
+The Stationery Shop application is built using Express.js and TypeScript, with MongoDB as the database. It helps manage a stationery shop's products and orders. It allows users to perform CRUD operations on products and place orders, manage inventory, and calculate total revenue. The app ensures data integrity using Mongoose schema validation.
 
 # Features
 Stationery Product Management
 
 Create a Product: Add new stationery products to the store.
 Get All Products: Fetch a list of all stationery products.
-Get a Specific Product: Retrieve detailed information of a specific product by ID.
-Update a Product: Modify the details (price, quantity) of an existing product.
+Get a Specific Product: Retrieve detailed information about a specific product by ID.
+Update a Product: Modify an existing product's details (price, quantity).
 Delete a Product: Remove a product from the store.
 Order Management
 Place an Order: Create orders for customers by specifying product, quantity, and total price.
@@ -23,15 +23,12 @@ MongoDB (either local installation or cloud-based instance like MongoDB Atlas)
 TypeScript (for better development experience)
 1. Clone the Repository
 git clone https://github.com/sanjidbari/stationary-shop-assignment.git
-2. Install Dependencies
-Navigate to the project directory and run:
+2. Install Dependencies : Navigate to the project directory and run:
 cd stationery-shop
 npm install
 3. Set Up MongoDB
 Ensure you have a running MongoDB instance. If you're using MongoDB Atlas, create a cluster and obtain the connection URI.
-
 Create a .env file in the root of the project and add your MongoDB URI:
-
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/stationery-shop?retryWrites=true&w=majority  # Or your MongoDB Atlas URI
 PORT=5000  # You can change the port if needed
 4. Start the Application

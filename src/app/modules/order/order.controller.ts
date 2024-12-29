@@ -13,7 +13,7 @@ const createOrder = async (req: Request, res: Response) => {
     });
 
     if (!result) {
-      return res.status(404).json({
+      res.status(404).json({
         message: "Product not found",
         status: false,
       });

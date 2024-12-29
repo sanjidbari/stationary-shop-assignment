@@ -7,7 +7,7 @@ import { OrderRoutes } from "./app/modules/order/order.route";
 app.use(express.json());
 app.use(cors());
 
-app.use("/api", ProductRoutes);
+app.use("/", ProductRoutes);
 app.use("/api", OrderRoutes);
 
 // app.get("/", (req, res) => {
